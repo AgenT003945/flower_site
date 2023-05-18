@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" type="text/css" href="styles_catalog.css">
+    <link rel="icon" href="icon1.png">
+    <script src="script_catalog.js"></script>
+    <style>
+        .quantity-input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Каталог цветов</h1>
+    </header>
+    
+    <section>
+        <h2>Наш каталог</h2>
+        <ul>
+            <li>
+                <img src="flower1.jpg" alt="Роза">
+                <h3>Роза</h3>
+                <p>Цена: $10</p>
+                <div class="quantity">
+                    <button class="minus-btn">-</button>
+                    <input type="text" class="quantity-input" value="0" readonly>
+                    <button class="plus-btn">+</button>
+                </div>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </li>
+            <li>
+                <img src="flower2.jpg" alt="Тюльпан">
+                <h3>Тюльпан</h3>
+                <p>Цена: $5</p>
+                <div class="quantity">
+                    <button class="minus-btn">-</button>
+                    <input type="text" class="quantity-input" value="0" readonly>
+                    <button class="plus-btn">+</button>
+                </div>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </li>
+            <li>
+                <img src="flower3.jpg" alt="Лилия">
+                <h3>Лилия</h3>
+                <p>Цена: $8</p>
+                <div class="quantity">
+                    <button class="minus-btn">-</button>
+                    <input type="text" class="quantity-input" value="0" readonly>
+                    <button class="plus-btn">+</button>
+                </div>
+                <button class="add-to-cart-btn">Добавить в корзину</button>
+            </li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Наш магазин цветов &copy; 2023. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const minusButtons = document.querySelectorAll('.minus-btn');
+        const plusButtons = document.querySelectorAll('.plus-btn');
+
+        minusButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const input = button.nextElementSibling;
+                let value = parseInt(input.value);
+                if (value > 0) {
+                    value--;
+                    input.value = value;
+                }
+            });
+        });
+
+        plusButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const input = button.previousElementSibling;
+                let value = parseInt(input.value);
+                value++;
+                input.value = value;
+            });
+        });
+    </script>
+</body>
+</html>

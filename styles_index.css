@@ -1,0 +1,118 @@
+@font-face {
+   font-family: 'Chicano';
+   src: url('D:/,VS code papka/.vscode/Сайт для магазина цветов/Noto_Serif_Display.ttf');
+}
+
+body {
+   font-family: 'Noto_Serif_Display', sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #fff; /* Белый фон */
+   animation: fade-in 1s ease-in-out;
+}
+
+body::after {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url('background.jpg'); /* Путь к фото */
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   opacity: 0.2; /* Прозрачность фото */
+   z-index: -1;
+}
+
+@keyframes fade-in {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+header {
+   background-color: #f9f9f9;
+   padding: 20px;
+   text-align: center;
+   animation: fade-in 1s ease-in-out;
+}
+
+header h1 {
+   font-family: 'Noto_Serif_Display', sans-serif;
+   font-size: 36px;
+   color: #333;
+   animation: fade-in 1s ease-in-out;
+}
+
+nav {
+   background-color: #333;
+   color: #fff;
+   padding: 10px;
+   animation: fade-in 1s ease-in-out;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+nav ul li {
+   display: inline;
+   margin-right: 10px;
+}
+
+nav ul li a {
+   color: #fff;
+   text-decoration: none;
+}
+
+section {
+   padding: 20px;
+   animation: fade-in 1s ease-in-out;
+}
+
+h2, h3 {
+   color: #333;
+   font-family: 'Georgia', serif;
+   animation: fade-in 1s ease-in-out;
+}
+
+ul li {
+   display: inline-block;
+   vertical-align: top;
+   width: 30%;
+   margin: 10px;
+   text-align: center;
+   animation: fade-in 1s ease-in-out;
+}
+
+ul li img {
+   width: 100%;
+   height: auto;
+}
+
+footer {
+   background-color: #f9f9f9;
+   padding: 10px;
+   text-align: center;
+   font-size: 12px;
+   color: #777;
+   animation: fade-in 1s ease-in-out;
+}
+
+footer {
+   background-color: #f9f9f9;
+   padding: 10px;
+   text-align: center;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   animation: fade-in 1s ease-in-out;
+}

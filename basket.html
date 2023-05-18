@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" type="text/css" href="styles_basket.css">
+    <link rel="icon" href="icon1.png">
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+    </header>
+    
+    <section>
+        <h2>Содержимое вашей корзины</h2>
+        <ul id="cart-items">
+            <!-- Здесь будет отображаться содержимое корзины -->
+        </ul>
+    </section>
+    
+    <footer>
+        <p>Наш магазин цветов &copy; 2023. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Функция для добавления элементов в корзину
+        function addToCart(item) {
+            var cart = document.getElementById('cart-items');
+            var li = document.createElement('li');
+            li.textContent = item;
+            cart.appendChild(li);
+        }
+
+        // Получение информации о товарах из вкладки "Каталог" и добавление их в корзину
+        var catalogItems = document.querySelectorAll('#catalog-items li');
+        catalogItems.forEach(function(item) {
+            addToCart(item.textContent);
+        });
+    </script>
+</body>
+</html>

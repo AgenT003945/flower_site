@@ -1,0 +1,156 @@
+/* Общие стили */
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-image: linear-gradient(to bottom, #ffdde1, #ffffff);
+   animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.container {
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+h1 {
+   font-size: 36px;
+   color: #333;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+p {
+   font-size: 16px;
+   line-height: 1.5;
+   color: #555;
+   text-align: center;
+}
+
+/* Стили для ссылок */
+
+a {
+   color: #333;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+a:hover {
+   color: gray;
+}
+
+/* Стили для кнопки */
+
+.button {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #ccc;
+   color: #fff;
+   font-size: 18px;
+   text-decoration: none;
+   transition: background-color 0.3s;
+}
+
+.button:hover {
+   background-color: gray;
+}
+
+/* Дополнительные стили для about.html */
+
+section.container {
+   background-color: #f5f5f5;
+   padding: 20px;
+   border-radius: 5px;
+   text-align: center;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+   0% {
+      transform: translateY(20px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+.accordion {
+   cursor: pointer;
+   color: #333;
+   font-weight: bold;
+   margin-bottom: 10px;
+   position: relative;
+}
+
+.accordion:hover {
+   color: gray;
+}
+
+.accordion::before {
+   content: '+';
+   position: absolute;
+   top: 0;
+   left: -20px;
+   font-size: 24px;
+   transition: transform 0.3s;
+}
+
+.active .accordion::before {
+   content: '-';
+   transform: rotate(45deg);
+}
+
+.panel {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.3s;
+}
+
+.active .panel {
+   max-height: 1000px;
+   transition: max-height 0.3s;
+}
+
+/* Прижатие футера к низу страницы */
+
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+section {
+   flex: 1 0 auto;
+}
+
+footer {
+   flex-shrink: 0;
+}
+
+.panel {
+   display: none;
+}
+
+.accordion {
+   position: relative;
+   z-index: 1;
+}

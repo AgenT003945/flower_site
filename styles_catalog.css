@@ -1,0 +1,125 @@
+/* Общие стили */
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f9f9f9;
+   margin: 0;
+   padding: 0;
+   animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+header {
+   background-color: #333;
+   padding: 20px;
+   text-align: center;
+}
+
+header h1 {
+   color: #fff;
+   font-size: 36px;
+}
+
+section {
+   padding: 20px;
+   text-align: center;
+   animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+   0% {
+      transform: translateY(20px);
+      opacity: 0;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+h2 {
+   font-size: 24px;
+   color: #333;
+}
+
+ul {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+
+li {
+   flex-basis: 300px;
+   margin: 10px;
+   padding: 10px;
+   background-color: #f9f9f9;
+   border-radius: 5px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+
+li:hover {
+   transform: scale(1.1);
+}
+
+img {
+   width: 200px;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 5px;
+}
+
+h3 {
+   font-size: 18px;
+   margin-top: 10px;
+}
+
+p {
+   font-size: 14px;
+   color: #888;
+   margin-top: 5px;
+}
+
+footer {
+   background-color: #333;
+   padding: 10px;
+   text-align: center;
+}
+
+footer p {
+   color: #fff;
+   font-size: 14px;
+}
+
+/* Прижатие футера к низу страницы */
+
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+}
+
+section {
+   flex: 1;
+}
+
+footer {
+   flex-shrink: 0;
+}
